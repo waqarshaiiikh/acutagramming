@@ -1,0 +1,10 @@
+.Header{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.normal-btn{
+    display: flex;
+
+}
