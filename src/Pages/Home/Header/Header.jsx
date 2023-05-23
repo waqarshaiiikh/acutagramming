@@ -17,7 +17,7 @@ const Header = () => {
                     <button >Work</button>
                 </div>
                 <div className='About-btn'>
-                    <button >Work</button>
+                    <button >About</button>
                 </div>
             </div>
             <div className='schedule-btn'>
