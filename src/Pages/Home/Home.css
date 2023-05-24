@@ -1,3 +1,12 @@
+/* Common Css */
+
+.Border {
+    border: 1px solid black;
+}
+
+
+/* Component Header CSS */
+
 .Header{
     margin-top: 10px;
     display: flex;
@@ -7,4 +16,15 @@
 .normal-btn{
     display: flex;
 
+}
+
+
+/* Component Banner CSS */
+
+/* Component Statistic CSS */
+
+/* Component Customer Experience Css  */
+
+.customer-experience{
+    background-color:rgb(255, 201, 78) ;
 }
