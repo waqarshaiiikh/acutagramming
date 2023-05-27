@@ -9,9 +9,9 @@ import { Link, NavLink } from 'react-router-dom'
 const Footer = (props) => {
   return (
     <footer className={props.className}>
-      <div className='footer-content'>
+      <div className='footer__section main_dev'>
 
-        <div className='footer-inner-div'>
+        <div className='footer__section__content logo-content'>
           <div className='footer-logo-tagline'>
             <div className='footer-logo'>
               <img src={logo} alt="logo" />
@@ -28,7 +28,7 @@ const Footer = (props) => {
           </div>
         </div>
 
-        <div className='footer-tabs-link .company'>
+        <div className='footer__section__content company'>
           <h2 className='tabs-title'> Company</h2>
           <div className='footer-tabs'>
             <NavLink to={'/About'}>About</NavLink>
@@ -41,7 +41,7 @@ const Footer = (props) => {
           </div>
         </div>
 
-        <div className='footer-tabs-link .legal'>
+        <div className='footer__section__content legal'>
           <h2 className='tabs-title'> Legal</h2>
           <div className='footer-tabs'>
             <NavLink to={'/Privacy'}> Privacy</NavLink>
@@ -52,18 +52,8 @@ const Footer = (props) => {
         </div>
       </div>
 
-      <div className='divider-wrapper'>
-        <div className='divider-padding'>
-          <div className='divider'>
-            <div className='line'></div>
-          </div>
-        </div>
-      </div>
-
-      <div className='footer-ending-note'>
-        <div className='footer-company-rights'> <h2>© 2023 Acutagramming. All rights reserved.</h2></div>
-      </div>
-
+      <div className='footer__section line'></div>
+      <div className='footer__section footer-company-rights'> <h2>© 2023 Acutagramming. All rights reserved.</h2></div>
     </footer>
   )
 }
@@ -82,21 +72,50 @@ export const FooterStyle = styled(Footer)((props) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    position: 'fixed',
-    width: "100%",
-    left: '0px',
-    bottom: '0px',
-    paddingTop: '30px'
+    // flexWrap: 'wrap',
+    
+    /**to be removed */
 
+    /**to be removed */
+    
+    // paddingTop: '30px'
+    width: "100%",
+    minHeight: '400px',
+    // padding: "50px 30px"
+    
   },
   /**Main div wraps all the content footer except the divider and the divider */
-  '& .footer-content': {
+  '& .footer__section': {
+    // border: '1px solid black',
+    flexGrow:1,
     display: 'flex',
-    flexWrap:'wrap',
-    justifyContent: 'space-between',
+    // flexWrap: 'wrap',
+    // minWidth: '500px',
+    width:'100%',
+    //   gap: '2rem',
+    // justifyContent:'center',
+    // justifyContent: 'space-between',
+    '& .footer__section__content:nth-child(1)': {
+      flexGrow: 2,
+    },
+    '& .footer__section__content': {
+      flexGrow: 1,
+    },
+    '& .logo-content':{
+      maxWidth: '300px'
+    },
+
+
+    "& .main_dev":{
+      display: 'flex',
+      // flexWrap: 'nowrap',
+      border: '1px solid black',
+
+    }
+
   },
   /* Footer contain div that has logo and company motive*/
-  '& .footer-inner-div': {
+  '& .logo-content': {
     padding: '0px 40px',
   },
   /**Footer Tab css div */
@@ -121,35 +140,20 @@ export const FooterStyle = styled(Footer)((props) => ({
   },
 
   /*divider*/
-  "& .divider-wrapper": {
-    width: '100%',
-    "& .divider": {
-      padding: '15px 0px',
-    },
-    "& .divider-padding": {
-      padding: '10px',
-    },
-    "& .line": {
-      borderTop: '1px solid white',
-      maxWidth: '1000px',
-      margin: 'auto'
-    },
+  "& .line": {
+    borderTop: '1px solid white',
+    maxWidth: '1040px',
   },
 
+
   /*Ending Notes*/
-  "& .footer-ending-note": {
-    width: '99%',
-    display: 'flex',
-    justifyContent: 'center',
-    ".footer-company-rights": {
-      paddingBottom: '20px',
-      fontSize: '11px',
-      h2: {
-        fontWeight: 'normal'
-      }
+  ".footer-company-rights": {
+    paddingBottom: '20px',
+    fontSize: '11px',
+    h2: {
+      fontWeight: 'normal'
     }
   }
-
 
 
 
