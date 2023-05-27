@@ -1,165 +1,159 @@
-import React from 'react'
-import logo from '../../assets/logo-white-text.png'
-import { AiOutlineInstagram, AiFillLinkedin } from 'react-icons/ai'
-import { BsFacebook } from 'react-icons/bs'
-import { FaTiktok, FaTwitter } from 'react-icons/fa'
-import styled from 'styled-components'
-import { Link, NavLink } from 'react-router-dom'
+import React from "react";
+import logo from "../../assets/logo-white-text.png";
+import { BsFacebook } from "react-icons/bs";
+import { FaInstagram, FaLinkedin, FaTiktok, FaTwitter } from "react-icons/fa";
+import styled from "styled-components";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = (props) => {
   return (
     <footer className={props.className}>
-      <div className='footer__section main_dev'>
-
-        <div className='footer__section__content logo-content'>
-          <div className='footer-logo-tagline'>
-            <div className='footer-logo'>
-              <img src={logo} alt="logo" />
+      <div className="margin_auto">
+        <div className='footer__section main_div'>
+          <div className='logo-content'>
+            <div className='footer-logo-tagline'>
+              <div className='footer-logo'>
+                <img src={logo} alt='logo' />
+              </div>
+              <div className='footer-tagline'>
+                <p>
+                  We help coaches turn their social media presence to a new
+                  revenue stream!
+                </p>
+              </div>
             </div>
-            <div className='footer-tagline'></div>
-            <p>We help coaches turn their social media presence to a new revenue stream!</p>
+            <div className='footer-social-media-icons'>
+              <div className='div_icon'>
+                <FaInstagram className='icon' />
+              </div>
+              <div className='div_icon'>
+                <BsFacebook className='icon' />
+              </div>
+              <div className='div_icon'>
+                <FaLinkedin className='icon' />
+              </div>
+              <div className='div_icon'>
+                <FaTiktok className='icon' />
+              </div>
+              <div className='div_icon'>
+                <FaTwitter className='icon' />
+              </div>
+            </div>
           </div>
-          <div className='footer-social-media-icons'>
-            <AiOutlineInstagram />
-            <BsFacebook />
-            <AiFillLinkedin />
-            <FaTiktok />
-            <FaTwitter />
+
+          <div className='wrapper__company__and__legal'>
+            <div className='footer__section__content company'>
+              <h2 className='tabs-title'> Company</h2>
+              <div className='footer-tabs'>
+                <NavLink to={"/About"}>About</NavLink>
+              </div>
+              <div className='footer-tabs'>
+                <NavLink href={"/About"}>Work</NavLink>
+              </div>
+              <div className='footer-tabs'>
+                <NavLink href={"/About"}>Pricing</NavLink>
+              </div>
+            </div>
+
+            <div className='footer__section__content legal'>
+              <h2 className='tabs-title'> Legal</h2>
+              <div className='footer-tabs'>
+                <NavLink to={"/Privacy"}> Privacy</NavLink>
+              </div>
+              <div className='footer-tabs'>
+                <NavLink to={"/Terms"}>Terms</NavLink>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className='footer__section__content company'>
-          <h2 className='tabs-title'> Company</h2>
-          <div className='footer-tabs'>
-            <NavLink to={'/About'}>About</NavLink>
-          </div>
-          <div className='footer-tabs'>
-            <NavLink href={'/About'}>Work</NavLink>
-          </div>
-          <div className='footer-tabs'>
-            <NavLink href={'/About'}>Pricing</NavLink>
-          </div>
+        <div className='footer__section line'>
+          <hr></hr>
         </div>
-
-        <div className='footer__section__content legal'>
-          <h2 className='tabs-title'> Legal</h2>
-          <div className='footer-tabs'>
-            <NavLink to={'/Privacy'}> Privacy</NavLink>
-          </div>
-          <div className='footer-tabs'>
-            <NavLink to={'/Terms'}>Terms</NavLink>
-          </div>
+        <div className='footer__section footer-company-rights'>
+          <p>© 2023 Acutagramming. All rights reserved.</p>
         </div>
       </div>
-
-      <div className='footer__section line'></div>
-      <div className='footer__section footer-company-rights'> <h2>© 2023 Acutagramming. All rights reserved.</h2></div>
     </footer>
-  )
-}
-
+  );
+};
 
 export const FooterStyle = styled(Footer)((props) => ({
-
   "&": {
-    border: '1px solid black',
-    backgroundColor: 'rgb(32, 32, 32)',
-    color: '#ADADAD',
-    fontFamily: '"Inter", Sans-serif',
-    fontWeight: 'normal',
-    fontSize: '17px',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    // flexWrap: 'wrap',
-    
-    /**to be removed */
-
-    /**to be removed */
-    
-    // paddingTop: '30px'
-    width: "100%",
-    minHeight: '400px',
-    // padding: "50px 30px"
-    
+    background: "rgb(32, 32, 32)",
+    color: "#ADADAD",
   },
-  /**Main div wraps all the content footer except the divider and the divider */
-  '& .footer__section': {
-    // border: '1px solid black',
-    flexGrow:1,
-    display: 'flex',
-    // flexWrap: 'wrap',
-    // minWidth: '500px',
-    width:'100%',
-    //   gap: '2rem',
-    // justifyContent:'center',
-    // justifyContent: 'space-between',
-    '& .footer__section__content:nth-child(1)': {
-      flexGrow: 2,
-    },
-    '& .footer__section__content': {
-      flexGrow: 1,
-    },
-    '& .logo-content':{
-      maxWidth: '300px'
-    },
-
-
-    "& .main_dev":{
-      display: 'flex',
-      // flexWrap: 'nowrap',
-      border: '1px solid black',
-
-    }
-
+  "& .margin_auto": {
+    margin: 'auto',
+    maxWidth: '1120px'
   },
-  /* Footer contain div that has logo and company motive*/
-  '& .logo-content': {
-    padding: '0px 40px',
-  },
-  /**Footer Tab css div */
-  "& .footer-tabs-link": {
-    '&': {
-      padding: '0px 40px'
+  "& .main_div": {
+    display: "flex",
+    justifyContent: "space-between",
+    flexWrap:'wrap',
+    // alignItems: 'center',
+    padding: "70px 0 20px 0px",
+    "& .wrapper__company__and__legal": {
+      display: "flex",
     },
-    '& .tabs-title': {
-      color: 'white',
-      textTransform: 'uppercase',
-      fontSize: '17px',
-      fontWeight: '600',
-      paddingBottom: '10px'
+    "& .logo-content": {
+      padding: "10px",
+      display: "flex",
+      flexDirection: "column",
+      width: "35%",
     },
-    '& .footer-tabs': {
-      padding: '10px 0px',
+    "& .footer-logo": {
+      marginBottom: "20px",
     },
-    '& .footer-tabs a': {
-      color: '#ADADAD',
-      textDecoration: 'none',
+    "& .footer-tagline": {
+      margin: "10px auto 20px auto",
+      padding: "0px 10px",
+      fontSize: "17px",
+    },
+    "& .footer-social-media-icons": {
+      display: "flex",
+    },
+    "& .div_icon": {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "44px",
+      width: "44px",
+    },
+    "& .footer-social-media-icons .icon": {
+      fontSize: "22px",
+      // margin: '0 10px'
+      // padding: '0px 22px  0 0',
     },
   },
 
-  /*divider*/
+  "& .footer__section__content": {
+    width: "150px",
+  },
+  "& .tabs-title, .footer-tabs": {
+    marginBottom: "15px",
+    a: {
+      textDecoration: "none",
+      color: "#ADADAD",
+    },
+  },
+  "& .tabs-title": {
+    color: "#E3E3E3",
+  },
   "& .line": {
-    borderTop: '1px solid white',
-    maxWidth: '1040px',
+    padding: "10px",
+  },
+  "& .footer-company-rights": {
+    textAlign: "center",
+    padding: "30px 0 70px 0",
+    fontFamily: "Inter, Sans-serif",
+    fontSize: "18px",
+    // margin: 'auto'
   },
 
 
-  /*Ending Notes*/
-  ".footer-company-rights": {
-    paddingBottom: '20px',
-    fontSize: '11px',
-    h2: {
-      fontWeight: 'normal'
-    }
-  }
 
+  
+}));
 
-
-}))
-
-
-export default Footer
-
-
+export default Footer;

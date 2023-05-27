@@ -14,7 +14,10 @@ function App() {
   return (
     <BrowserRouter>
 			<Routes>
-				<Route element={<> <Header /> <Home/> <FooterStyle/></>} path="/" />
+				<Route element={<> 
+				{/* <Header /> */}
+				{/* <Home/> */}
+				<FooterStyle/></>} path="/" />
 			</Routes>
     </BrowserRouter>
   );
