@@ -2,8 +2,16 @@ import logo from '../../assets/logo.png'
 import styled from 'styled-components'
 import ButtonStyle from './ButtonComponent'
 import { Link } from 'react-router-dom'
+import MenuStyle from './MenuBar'
+import { useState } from 'react'
 
 const Header = ({ className }) => {
+
+    const [menu, setMenu] = useState(false);
+
+    const openSideBar = ()=> {
+        setMenu(true);
+    }
 
     return (
         <header className={className}>
@@ -24,7 +32,7 @@ const Header = ({ className }) => {
                     </div>
                     <div className='tabs__item__menu'>
                         {/* menu icon */}
-                        <button className='menu'>
+                        <button className='menu' onClick={openSideBar}>
                             <span className='line'></span>
                             <span className='line'></span>
                             <span className='line'></span>
@@ -37,13 +45,12 @@ const Header = ({ className }) => {
                     </div>
                 </div>
             </div>
+
+            {menu && <MenuStyle menu={menu} setMenu={setMenu}/>}
+
         </header>
     )
 }
-
-
-export default Header
-
 
 export const HeaderStyle = styled(Header)((props) => ({
     '& .margin__auto': {

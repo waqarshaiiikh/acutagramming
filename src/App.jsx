@@ -1,6 +1,5 @@
 import './App.css'
-import Header, { HeaderStyle } from './Pages/CommonComponents/Header';
-import Home from './Pages/Home/Home';
+import { HeaderStyle } from './Pages/CommonComponents/Header';
 import { FooterStyle } from './Pages/CommonComponents/Footer'
 import {
 	BrowserRouter,
