@@ -79,8 +79,8 @@ export const HeaderStyle = styled(Header)((props) => ({
         }
     },
     '@media screen and (min-width: 768px) and (max-width: 1023px)': {
-        
     },
+    /**common css for both tablet and mobile */
     '@media (max-width: 1023px) ': {
         '& .tabs__item': {
             display: 'none',
