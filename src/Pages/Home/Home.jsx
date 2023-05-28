@@ -1,5 +1,4 @@
 import React from 'react'
-import './Home.css'
 import Banner from './Component/Banner'
 import CompanyStatistics from './Component/CompanyStatistics'
 import CustomerExperience from './Component/CustomerExperience'

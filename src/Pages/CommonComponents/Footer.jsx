@@ -2,15 +2,15 @@ import React from "react";
 import logo from "../../assets/logo-white-text.png";
 import { BsFacebook } from "react-icons/bs";
 import { FaInstagram, FaLinkedin, FaTiktok, FaTwitter } from "react-icons/fa";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link, NavLink } from "react-router-dom";
 
 const Footer = (props) => {
   return (
     <footer className={props.className}>
-      <div className="margin_auto">
+      <div className="margin_auto responsive">
         <div className='footer__section main_div'>
-          <div className='logo-content'>
+          <div className='main_div_section logo-content'>
             <div className='footer-logo-tagline'>
               <div className='footer-logo'>
                 <img src={logo} alt='logo' />
@@ -41,7 +41,7 @@ const Footer = (props) => {
             </div>
           </div>
 
-          <div className='wrapper__company__and__legal'>
+          <div className='main_div_section wrapper__company__and__legal'>
             <div className='footer__section__content company'>
               <h2 className='tabs-title'> Company</h2>
               <div className='footer-tabs'>
@@ -82,78 +82,99 @@ export const FooterStyle = styled(Footer)((props) => ({
   "&": {
     background: "rgb(32, 32, 32)",
     color: "#ADADAD",
-  },
-  "& .margin_auto": {
-    margin: 'auto',
-    maxWidth: '1120px'
-  },
-  "& .main_div": {
-    display: "flex",
-    justifyContent: "space-between",
-    flexWrap:'wrap',
-    // alignItems: 'center',
-    padding: "70px 0 20px 0px",
-    "& .wrapper__company__and__legal": {
-      display: "flex",
+    "& .margin_auto": {
+      margin: 'auto',
+      maxWidth: '1140px'
     },
-    "& .logo-content": {
+    "& .main_div": {
+      display: "flex",
+      justifyContent: "space-between",
+      flexWrap: 'wrap',
+      padding: "70px 0 20px 0px",
+      "& .wrapper__company__and__legal": {
+        display: "flex",
+      },
+      "& .logo-content": {
+        padding: "10px",
+        display: "flex",
+        flexDirection: "column",
+        width: "35%",
+      },
+      "& .footer-logo": {
+        marginBottom: "20px",
+      },
+      "& .footer-tagline": {
+        margin: "10px auto 20px auto",
+        padding: "0px 10px",
+        fontSize: "17px",
+      },
+      "& .footer-social-media-icons": {
+        display: "flex",
+      },
+      "& .div_icon": {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "44px",
+        width: "44px",
+      },
+      "& .footer-social-media-icons .icon": {
+        fontSize: "22px",
+      },
+    },
+
+    "& .footer__section__content": {
+      width: "150px",
+    },
+    "& .tabs-title, .footer-tabs": {
+      marginBottom: "15px",
+      a: {
+        textDecoration: "none",
+        color: "#ADADAD",
+      },
+    },
+    "& .tabs-title": {
+      textTransform: 'uppercase',
+      color: "#E3E3E3",
+      fontSize: '17px',
+      fontWeight: '600'
+    },
+    "& .line": {
       padding: "10px",
-      display: "flex",
-      flexDirection: "column",
-      width: "35%",
     },
-    "& .footer-logo": {
-      marginBottom: "20px",
-    },
-    "& .footer-tagline": {
-      margin: "10px auto 20px auto",
-      padding: "0px 10px",
-      fontSize: "17px",
-    },
-    "& .footer-social-media-icons": {
-      display: "flex",
-    },
-    "& .div_icon": {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      height: "44px",
-      width: "44px",
-    },
-    "& .footer-social-media-icons .icon": {
-      fontSize: "22px",
-      // margin: '0 10px'
-      // padding: '0px 22px  0 0',
+    "& .footer-company-rights": {
+      textAlign: "center",
+      padding: "30px 20px 70px 20px",
+      fontFamily: "Inter, Sans-serif",
+      fontSize: "18px",
     },
   },
-
-  "& .footer__section__content": {
-    width: "150px",
-  },
-  "& .tabs-title, .footer-tabs": {
-    marginBottom: "15px",
-    a: {
-      textDecoration: "none",
-      color: "#ADADAD",
+  '@media (max-width: 768px)':{
+    "& .main_div": {
+      display: 'flex',
+      flexDirection:'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '100%',
+      gap:'1.25rem',
+      '& .main_div_section':{
+        width: 'inherit',
+        textAlign: 'center',
+      },
+      '& .footer-social-media-icons':{
+        justifyContent: 'center',
+        flexWrap: 'wrap',
+      }
     },
-  },
-  "& .tabs-title": {
-    color: "#E3E3E3",
-  },
-  "& .line": {
-    padding: "10px",
-  },
-  "& .footer-company-rights": {
-    textAlign: "center",
-    padding: "30px 0 70px 0",
-    fontFamily: "Inter, Sans-serif",
-    fontSize: "18px",
-    // margin: 'auto'
+    "& .wrapper__company__and__legal":{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }
   },
 
 
-
-  
 }));
 
 export default Footer;
