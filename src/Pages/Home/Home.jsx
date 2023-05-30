@@ -4,7 +4,7 @@ import CompanyStatistics from './Component/CompanyStatistics'
 import CustomerExperience from './Component/CustomerExperience'
 import ExperienceFrame from './Component/ExperienceFrame';
 import CompanyMoto from './Component/CompanyMoto'
-import Advertisement from './Component/Advertisement'
+import Advertisement from '../CommonComponents/Advertisement';
 
 const Home = () => {
     return (<>
