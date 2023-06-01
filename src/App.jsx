@@ -28,7 +28,6 @@ const commonTheme = {
 
 function App() {
 
-
 	return (
 		<ThemeProvider theme={commonTheme}>
 			<BrowserRouter>
@@ -36,7 +35,8 @@ function App() {
 					<Route element={<>
 						<HeaderStyle />
 						<Home/>
-						<FooterStyle /></>} path="/" />
+						{/* <FooterStyle /> */}
+						</>} path="/" />
 					<Route element={<About/>} path="/About" />
 				</Routes>
 			</BrowserRouter>
