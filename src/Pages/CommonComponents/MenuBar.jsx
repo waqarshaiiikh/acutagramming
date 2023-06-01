@@ -19,13 +19,13 @@ const MenuBar = ({className, menu, setMenu}) => {
                     </button>
                 </div>
                 <div className='tabs__item'>
-                    <Link >Pricing</Link>
+                    <Link to='/About' >Pricing</Link>
                 </div>
                 <div className='tabs__item'>
-                    <Link >Work</Link>
+                    <Link to='/About' >Work</Link>
                 </div>
                 <div className='tabs__item'>
-                    <Link >About</Link>
+                    <Link to='/About' >About</Link>
                 </div>
             </div>
             <div className='transparent-div' onClick={handleClose}></div>
