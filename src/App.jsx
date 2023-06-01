@@ -35,7 +35,7 @@ function App() {
 					<Route element={<>
 						<HeaderStyle />
 						<Home/>
-						{/* <FooterStyle /> */}
+						<FooterStyle />
 						</>} path="/" />
 					<Route element={<About/>} path="/About" />
 				</Routes>

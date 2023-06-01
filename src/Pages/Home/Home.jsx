@@ -11,10 +11,10 @@ const Home = () => {
     return (<>
         <Banner />
         <CompanyStatistics/>
-        {/* <CustomerExperience/> */}
-        {/* <ExperienceFrame/> */}
-        {/* <CompanyMoto/> */}
-        {/* <WantsToConnect/> */}
+        <CustomerExperience/>
+        <ExperienceFrame/>
+        <CompanyMoto/>
+        <WantsToConnect/>
         {/* <Advertisement/> */}
     </>)
 }
