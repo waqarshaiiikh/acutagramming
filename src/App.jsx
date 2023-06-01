@@ -37,7 +37,7 @@ function App() {
 						<HeaderStyle />
 						<Home/>
 						<FooterStyle /></>} path="/" />
-					<Route element={<About/>} path="/about" />
+					<Route element={<About/>} path="/About" />
 				</Routes>
 			</BrowserRouter>
 		</ThemeProvider>

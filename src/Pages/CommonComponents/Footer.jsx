@@ -45,13 +45,13 @@ const Footer = (props) => {
             <div className='footer__section__content company'>
               <h2 className='tabs-title'> Company</h2>
               <div className='footer-tabs'>
-                <NavLink to={"/About"}>About</NavLink>
+                <Link to={"/About"}>About</Link>
               </div>
               <div className='footer-tabs'>
-                <NavLink href={"/About"}>Work</NavLink>
+                <Link href={"/About"}>Work</Link>
               </div>
               <div className='footer-tabs'>
-                <NavLink href={"/About"}>Pricing</NavLink>
+                <Link href={"/About"}>Pricing</Link>
               </div>
             </div>
 

@@ -17,7 +17,9 @@ const Header = ({ className }) => {
         <header className={className}>
             <div className='margin__auto'>
                 <div className='logo'>
-                    <img alt='logo' src={logo} />
+                    <Link to='/'>
+                        <img alt='logo' src={logo} />
+                    </Link>
                 </div>
 
                 <div className="tabs">
@@ -28,7 +30,7 @@ const Header = ({ className }) => {
                         <Link >Work</Link>
                     </div>
                     <div className='tabs__item'>
-                        <Link >About</Link>
+                        <Link to='/About'>About</Link>
                     </div>
                     <div className='tabs__item__menu'>
                         {/* menu icon */}

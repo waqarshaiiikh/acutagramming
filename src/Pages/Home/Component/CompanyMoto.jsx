@@ -29,12 +29,12 @@ const CompanyMoto = ({ className }) => {
                 </span>
                 <br />
                 <br />
-                <p>
+                <span>
                     It is so important to build healthy relationships with your clients through social media and we help you with that. We help you learn how to use social media to check in with your clients, offer support, and share their successes. By doing so, you show that you care about their progress and are invested in their success.
-                </p>
+                </span>
             </p>
             <div className='CompanyMoto-heading'>
-                <h2>Sell to your idea clients</h2>
+                <h2>Sell to your idea clients:</h2>
             </div>
             <p className='paragraph'>
                 With our sell services you finally start selling your coaching services to your ideal clients through social media and can turn your social media into a revenue generating stream for your business.
