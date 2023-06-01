@@ -23,27 +23,31 @@ const WantsToConnectStyle = styled(WantsToConnect)((props) => ({
     '&': {
         backgroundColor: '#F9FAFB',
         padding: '8rem 0rem 8rem 0rem',
-        '& .margin-auto':{
+        '& .margin-auto': {
             maxWidth: '1140px',
             margin: 'auto',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             gap: '20px',
-            h2:{
+            h2: {
                 fontSize: '40px',
                 fontWeight: 600,
-                color:'#2F2F2F'
+                color: '#2F2F2F'
             },
-            '& .wrapper':{
+            '& .wrapper': {
                 display: 'flex',
                 gap: '2rem',
                 alignItems: 'center',
             },
 
         }
+    }, '@media screen and (max-width: 767px) ': {
+        '& .wrapper': {
+            flexDirection: 'column',
+            gap: '5px',
+        }
     },
-    '':{}
 
 }));
 

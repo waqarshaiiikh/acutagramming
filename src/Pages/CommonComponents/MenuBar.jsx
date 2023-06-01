@@ -94,8 +94,7 @@ const MenuStyle = styled(MenuBar)((props) => ({
         backgroundColor: 'rgba(51,51,51,.5)',
         opacity: '0.5',
     },
-    
-
+   
 }));
 
 export default MenuStyle;

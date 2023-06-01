@@ -50,7 +50,7 @@ const CompanyMotoStyled = styled(CompanyMoto)((props) => ({
     '&': {
         maxWidth: '1140px',
         margin: 'auto',
-        padding: '80px 0px',
+        padding: '80px 10px',
         '& .title': {
             color: props.theme.yellow,
             fontSize: '20px',
@@ -61,7 +61,6 @@ const CompanyMotoStyled = styled(CompanyMoto)((props) => ({
         },
         h2: {
             fontSize: '50px',
-
         },
         '& .whatWeDoNext': {
             textDecoration: 'underline',
@@ -80,7 +79,31 @@ const CompanyMotoStyled = styled(CompanyMoto)((props) => ({
             textAlign: 'justify',
             textJustify: 'inter-word',
             lineHeight: '25px',
-        }
+        },
+        '@media (max-width: 1023px)': {
+            '&': {
+                h2: {
+                    fontSize: '34px',
+                    fontWeight: 600,
+                },
+                '& .CompanyMoto-heading': {
+                    padding: '40px 0 20px 0',
+                    h2: {
+                        fontSize: '26px',
+                    }
+                },
+                '& .paragraph': {
+                    fontSize: '18px',
+                    margin: '0 0 20px',
+                    color: '#505050',
+                    textAlign: 'justify',
+                    textJustify: 'inter-word',
+                    lineHeight: '25px',
+                },
+            },
+        },
+        
+
     },
 
 }));

@@ -31,9 +31,7 @@ const StatisticsSection = ({ className }) => {
                              suffix={stats.suffix}
                              separator=" "
                              >
-
                              </CountUp>
-                            {/* <h1>{stats.stats}</h1> */}
                         </div>
                         <div className='statistic-under-text'>
                             <h2>{stats.under_text}</h2>
@@ -82,15 +80,14 @@ const CompanyStatistics = styled(StatisticsSection)((props) => ({
         marginBottom: '20px'
     },
     '& .statistic-count-text span':{
-        color: '#808080',
-        fontSize: '38px',
+        color: '#333333',
+        fontSize: '30px',
         fontWeight: 700,
     },
     '& .statistic-under-text h2': {
         color: '#808080',
         fontSize: '22px',
         fontWeight: 400,
-
     },
     '@media (max-width: 768px)': {
         "& .statistic-detail": {

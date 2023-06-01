@@ -61,7 +61,7 @@ export const HeaderStyle = styled(Header)((props) => ({
         alignItems: 'center',
         maxWidth: '1140px',
         margin: 'auto',
-        padding: '25px 0 0 0',
+        padding: '25px 14px',
         '& .tabs': {
             display: 'flex',
             alignItems: 'center',
