@@ -38,8 +38,8 @@ const MenuStyle = styled(MenuBar)((props) => ({
         display: 'flex',
     },
     '& .menu, transparent-div':{
-        transition: 'transform 3s ease-out', // Adding the transition property
-        transform: props.menu ? 'translateX(0)' : 'translateX(-100%)', // Apply the transformation based on menu state    
+        // transition: 'transform 3s ease-out', // Adding the transition property
+        // transform: props.menu ? 'translateX(0)' : 'translateX(-100%)', // Apply the transformation based on menu state    
     },
     '& .menu ': {
         border: '1px solid #f7f7f7',
@@ -86,14 +86,15 @@ const MenuStyle = styled(MenuBar)((props) => ({
 
     },
     '& .transparent-div': {
-        position: 'fixed',
-        width: '100vw',
+        position: 'fixed', 
+        transition: 'width 0.5s', // Adding the transition property
+        width: props.menu ? '100vw' : '0', // Apply the width based on menu state
         height: '100vh',
         top: 0,
         backgroundColor: 'rgba(51,51,51,.5)',
         opacity: '0.5',
-        transition: 'all .4s ease'
-    }
+    },
+    
 
 }));
 

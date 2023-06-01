@@ -7,6 +7,7 @@ import {
 	Route
 } from "react-router-dom";
 import { ThemeProvider } from 'styled-components';
+import Home from './Pages/Home/Home';
 
 const commonTheme = {
 	fontSizeSmall: '14px', 
@@ -20,6 +21,8 @@ const commonTheme = {
 	yellow: '#FFC94E',
 	black: '#202020',
 	tabsColor: '#262E33',
+	maxWidth: '1140px',
+
 }
 
 function App() {
@@ -31,7 +34,7 @@ function App() {
 				<Routes>
 					<Route element={<>
 						<HeaderStyle />
-						{/* <Home/> */}
+						<Home/>
 						<FooterStyle /></>} path="/" />
 				</Routes>
 			</BrowserRouter>

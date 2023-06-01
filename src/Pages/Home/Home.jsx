@@ -13,7 +13,7 @@ const Home = () => {
         <CustomerExperience/>
         <ExperienceFrame/>
         <CompanyMoto/>
-        <Advertisement/>
+        {/* <Advertisement/> */}
     </>)
 }
 
