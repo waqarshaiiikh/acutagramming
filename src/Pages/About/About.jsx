@@ -3,6 +3,7 @@ import { AboutPageTextStyle } from './Component/AboutPageText'
 import { HeaderStyle } from '../CommonComponents/Header'
 import { FooterStyle } from '../CommonComponents/Footer'
 import { TeamStyle } from './Component/Team'
+import WantsToConnect from '../CommonComponents/WantsToConnect'
 
 const About = () => {
   return (
@@ -10,6 +11,7 @@ const About = () => {
       <HeaderStyle />
       <AboutPageTextStyle/>
       <TeamStyle/>
+      <WantsToConnect/>
       <FooterStyle />
     </>
   )

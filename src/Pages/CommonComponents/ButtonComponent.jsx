@@ -28,7 +28,8 @@ export default ButtonStyle;
 
 
 /** variant 
- *                  <ButtonStyle text='Schedule a Call' variant='outline' color='none' ></ButtonStyle>
+ *                
+                    <ButtonStyle text='Schedule a Call' variant='outline' color='none' ></ButtonStyle>
                     <ButtonStyle text='Schedule a Call' variant='fill' color='yellow' ></ButtonStyle>
                     <ButtonStyle text='Schedule a Call' variant='fill' color='black' ></ButtonStyle>
         

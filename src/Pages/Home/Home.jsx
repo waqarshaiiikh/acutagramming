@@ -5,6 +5,7 @@ import CustomerExperience from './Component/CustomerExperience'
 import ExperienceFrame from './Component/ExperienceFrame';
 import CompanyMoto from './Component/CompanyMoto'
 import Advertisement from '../CommonComponents/Advertisement';
+import WantsToConnect from '../CommonComponents/WantsToConnect';
 
 const Home = () => {
     return (<>
@@ -13,6 +14,7 @@ const Home = () => {
         <CustomerExperience/>
         <ExperienceFrame/>
         <CompanyMoto/>
+        <WantsToConnect/>
         {/* <Advertisement/> */}
     </>)
 }
