@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import { ThemeProvider } from 'styled-components';
 import Home from './Pages/Home/Home';
+import About from './Pages/About/About';
 
 const commonTheme = {
 	fontSizeSmall: '14px', 
@@ -36,6 +37,7 @@ function App() {
 						<HeaderStyle />
 						<Home/>
 						<FooterStyle /></>} path="/" />
+					<Route element={<About/>} path="/about" />
 				</Routes>
 			</BrowserRouter>
 		</ThemeProvider>
