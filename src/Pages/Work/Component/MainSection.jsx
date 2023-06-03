@@ -27,10 +27,8 @@ const MainSection = (props) => {
                         (customer, i) => (
                             <div className={`customer`} key={customer.id}>
                                 <div className='item video'>
-
                                     {customer?.video_src && <video controls > <source src={customer.video_src} type="video/mp4" /> </video>}
                                     {customer?.img_src && <img src={customer.img_src} alt='customer pic' />}
-
                                 </div>
                                 <div className='item description'>
                                     <div className='name'> <h2>{customer.name}</h2> </div>

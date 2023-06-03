@@ -5,9 +5,9 @@ import ButtonStyle from '../../CommonComponents/ButtonComponent';
 const Branding = (props) => {
 
     const pricingCard = [
-        { type: 'Basic', price: '$99', btnText: 'Buy Basic', included: ['8 creatives', 'Captions & Hashtags', 'Content Calendar'] },
-        { type: 'Standard', price: '$160', btnText: 'Buy Standard', included: ['12 Creatives', '6 reel branding edits', 'Captions & Hashtags', 'Content Calendar', 'IG highlight icons'] },
-        { type: 'Premium', price: '$249', btnText: 'Buy Premium', included: ['14 Creatives', '10 reel branding edits', ' Lightroom edits for 10 images', 'Captions & hashtags', ' IG highlight icons', 'Content Calendar',] },
+        { id: 1, type: 'Basic', price: '$99', btnText: 'Buy Basic', included: ['8 creatives', 'Captions & Hashtags', 'Content Calendar'] },
+        { id: 2, type: 'Standard', price: '$160', btnText: 'Buy Standard', included: ['12 Creatives', '6 reel branding edits', 'Captions & Hashtags', 'Content Calendar', 'IG highlight icons'] },
+        { id: 3, type: 'Premium', price: '$249', btnText: 'Buy Premium', included: ['14 Creatives', '10 reel branding edits', ' Lightroom edits for 10 images', 'Captions & hashtags', ' IG highlight icons', 'Content Calendar',] },
     ]
 
     return (
@@ -16,7 +16,7 @@ const Branding = (props) => {
             <p>If you’re looking to build a reputable social media presence for your social media, it is really important to have your social branding on point. With our branding packages, we plan a comprehensive branding strategy for your socials that sets you apart from others!</p>
             <div className='price'>
                 {pricingCard.map(card => (
-                    <div className='card'>
+                    <div className='card' key={card.id}>
                         <div className='price-description'>
                             <div className='wrapper__price'>
                                 <div className='priceType'> <h2>{card.type}</h2></div>
@@ -29,7 +29,9 @@ const Branding = (props) => {
                         </div>
                         <div className='includes'>
                             <h2>WHAT'S INCLUDED</h2>
-                            {card.included.map(included => (<div className='include--item'><span>{included}</span></div>))}
+                            <div className='include__main__div'>
+                                {card.included.map((included, id) => (<div className='include--item' key={id + 1}><span>{included}</span></div>))}
+                            </div>
                         </div>
                     </div>
 
@@ -45,11 +47,11 @@ const BrandingStyle = styled(Branding)((props) => ({
         maxWidth: '1140px',
         margin: 'auto',
         padding: '6rem 0',
-        h2:{
+        h2: {
             fontSize: '56px',
             marginBottom: '20px',
         },
-        p:{
+        p: {
             margin: '0 0 20px',
             padding: '0 0 30px',
         },
@@ -82,9 +84,25 @@ const BrandingStyle = styled(Branding)((props) => ({
             },
         },
         '& .includes': {
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between', // Distribute space evenly between elements
             borderStyle: 'solid',
             borderWidth: '1px 1px 1px 1px',
-            borderColor: '#DEDEDE'
+            borderColor: '#DEDEDE',
+            padding: '20px 40px 20px 40px',
+            h2: {
+                color: '#232323',
+                fontSize: '14px',
+                fontWeight: 500,
+
+            },
+            '& .include__main__div': {
+                flex: '1', // Expand to fill remaining space
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+            },
         },
         '& .price': {
             display: 'flex',
@@ -93,6 +111,8 @@ const BrandingStyle = styled(Branding)((props) => ({
         },
         '& .card ': {
             width: '30%',
+            flex: '1',
+
         }
     },
 
