@@ -21,7 +21,7 @@ const Branding = (props) => {
                             <div className='wrapper__price'>
                                 <div className='priceType'> <h2>{card.type}</h2></div>
                                 <h2>From</h2>
-                                <div className='price'> <h2>{card.price}</h2></div>
+                                <div className='priceText'> <h2>{card.price}</h2></div>
                                 <div className='btn'>
                                     <ButtonStyle text={card.btnText} variant='fill' color='black' />
                                 </div>
@@ -56,7 +56,7 @@ const BrandingStyle = styled(Branding)((props) => ({
 
         '& .price-description': {
             borderStyle: 'solid',
-            borderWidth: '0px 1px 1px 1px',
+            borderWidth: '1px 1px 1px 1px',
             borderColor: '#DEDEDE',
             color: '#232323',
             padding: '30px',
@@ -71,7 +71,7 @@ const BrandingStyle = styled(Branding)((props) => ({
                     lineHeight: '50px',
                     fontWeight: '500',
                 },
-                '> .price h2': {
+                '> .priceText h2': {
                     fontSize: '34px',
                     lineHeight: '50px',
                     fontWeight: 800,
@@ -83,7 +83,7 @@ const BrandingStyle = styled(Branding)((props) => ({
         },
         '& .includes': {
             borderStyle: 'solid',
-            borderWidth: '0px 1px 1px 1px',
+            borderWidth: '1px 1px 1px 1px',
             borderColor: '#DEDEDE'
         },
         '& .price': {
