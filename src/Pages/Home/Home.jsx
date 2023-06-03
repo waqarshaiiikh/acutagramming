@@ -9,7 +9,7 @@ import WantsToConnect from '../CommonComponents/WantsToConnect';
 const Home = () => {
     return (<>
         <Banner />
-        {/* <CompanyStatistics/> */}
+        <CompanyStatistics/>
         <CustomerExperience/>
         <ExperienceFrame/>
         <CompanyMoto/>
