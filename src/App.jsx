@@ -9,6 +9,7 @@ import {
 import { ThemeProvider } from 'styled-components';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
+import Work from './Pages/Work/Work';
 
 const commonTheme = {
 	fontSizeSmall: '14px', 
@@ -38,6 +39,7 @@ function App() {
 						<FooterStyle />
 						</>} path="/" />
 					<Route element={<About/>} path="/About" />
+					<Route element={<Work/>} path="/Work" />
 				</Routes>
 			</BrowserRouter>
 		</ThemeProvider>

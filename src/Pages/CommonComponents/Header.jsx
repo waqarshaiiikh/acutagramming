@@ -4,6 +4,8 @@ import ButtonStyle from './ButtonComponent'
 import { Link } from 'react-router-dom'
 import MenuStyle from './MenuBar'
 import { useState } from 'react'
+import { WorkLink } from '../Work/Work'
+import { AboutLink } from '../About/About'
 
 const Header = ({ className }) => {
 
@@ -27,13 +29,12 @@ const Header = ({ className }) => {
                         <Link >Pricing</Link>
                     </div>
                     <div className='tabs__item'>
-                        <Link >Work</Link>
+                        <WorkLink/>
                     </div>
                     <div className='tabs__item'>
-                        <Link to='/About'>About</Link>
+                        <AboutLink/>
                     </div>
                     <div className='tabs__item__menu'>
-                        {/* menu icon */}
                         <button className='menu' onClick={openSideBar}>
                             <span className='line'></span>
                             <span className='line'></span>
