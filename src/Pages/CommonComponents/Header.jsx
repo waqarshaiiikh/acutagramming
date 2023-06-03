@@ -6,6 +6,7 @@ import MenuStyle from './MenuBar'
 import { useState } from 'react'
 import { WorkLink } from '../Work/Work'
 import { AboutLink } from '../About/About'
+import { PricingLink } from '../Pricing/Pricing'
 
 const Header = ({ className }) => {
 
@@ -26,7 +27,7 @@ const Header = ({ className }) => {
 
                 <div className="tabs">
                     <div className='tabs__item'>
-                        <Link >Pricing</Link>
+                        <PricingLink/>
                     </div>
                     <div className='tabs__item'>
                         <WorkLink/>
