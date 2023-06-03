@@ -14,7 +14,7 @@ const Pricing = () => {
   )
 }
 
-export const PricingLink = () => <Link to='/Pricing'>Pricing</Link>;
+export const PricingLink = (props) => <Link to='/Pricing'  onClick={props.onClick} >Pricing</Link>;
 
 
 export default Pricing

@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import logo from "../../assets/logo-white-text.png";
 import { BsFacebook } from "react-icons/bs";
 import { FaInstagram, FaLinkedin, FaTiktok, FaTwitter } from "react-icons/fa";
 import styled, { css } from "styled-components";
 import { Link, NavLink } from "react-router-dom";
+import { PricingLink } from "../Pricing/Pricing";
+import { WorkLink } from "../Work/Work";
+import { AboutLink } from "../About/About";
+
 
 const Footer = (props) => {
+  const scrollUp = useCallback(() => {
+      window.scrollTo(0, 0);
+    }
+    , []
+  )
+
   return (
     <footer className={props.className}>
       <div className="margin_auto responsive">
@@ -45,13 +55,13 @@ const Footer = (props) => {
             <div className='footer__section__content company'>
               <h2 className='tabs-title'> Company</h2>
               <div className='footer-tabs'>
-                <Link to={"/About"}>About</Link>
+                <AboutLink onClick={scrollUp} />
               </div>
               <div className='footer-tabs'>
-                <Link href={"/About"}>Work</Link>
+                <WorkLink onClick={scrollUp} />
               </div>
               <div className='footer-tabs'>
-                <Link href={"/About"}>Pricing</Link>
+                <PricingLink onClick={scrollUp} />
               </div>
             </div>
 
@@ -149,24 +159,24 @@ export const FooterStyle = styled(Footer)((props) => ({
       fontSize: "18px",
     },
   },
-  '@media (max-width: 768px)':{
+  '@media (max-width: 768px)': {
     "& .main_div": {
       display: 'flex',
-      flexDirection:'column',
+      flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
       width: '100%',
-      gap:'1.25rem',
-      '& .main_div_section':{
+      gap: '1.25rem',
+      '& .main_div_section': {
         width: 'inherit',
         textAlign: 'center',
       },
-      '& .footer-social-media-icons':{
+      '& .footer-social-media-icons': {
         justifyContent: 'center',
         flexWrap: 'wrap',
       }
     },
-    "& .wrapper__company__and__legal":{
+    "& .wrapper__company__and__legal": {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',

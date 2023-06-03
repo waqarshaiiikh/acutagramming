@@ -18,6 +18,6 @@ const About = () => {
   )
 }
 
-export const AboutLink = () => ( <Link to='/About' >About</Link> );
+export const AboutLink = (props) => ( <Link to='/About' onClick={props.onClick} >About</Link> );
 
 export default About

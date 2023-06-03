@@ -13,6 +13,6 @@ const Work = () => {
   )
 }
 
-export const WorkLink = () => (<Link to='/Work' >Work</Link>);
+export const WorkLink = (props) => (<Link to='/Work' onClick={props.onClick} >Work</Link>);
 
 export default Work
