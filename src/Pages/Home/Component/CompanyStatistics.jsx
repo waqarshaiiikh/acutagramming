@@ -65,7 +65,7 @@ const CompanyStatistics = styled(StatisticsSection)((props) => ({
         maxWidth: '1140px',
     },
     '& .statistic-title': {
-        margin: '20px 10px',
+        padding: '20px 10px',
     },
     '& .statistic-detail-item': {
         alignSelf: 'center',
