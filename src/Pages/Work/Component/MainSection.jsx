@@ -103,7 +103,12 @@ const MainSectionStyle = styled(MainSection)((props) => ({
                         fontSize: '20px',
                         lineHeight: '33px',
                         fontWeight: 400,
-                    }
+                    },
+                    '> .Explore': {
+                        h2: {
+                            fontSize: '40px'
+                        }
+                    },
                 },
             },
             '> .customer:nth-child(even)': {
@@ -114,6 +119,11 @@ const MainSectionStyle = styled(MainSection)((props) => ({
     '@media screen and (max-width: 767px) ': {
         '& .customers > .customer:nth-child(even)':{
             flexDirection: 'column-reverse',
+        },
+        '& .Explore': {
+            h2: {
+                fontSize: '40px'
+            }
         },
         '& .customers > .customer':{
                 
@@ -144,7 +154,7 @@ const MainSectionStyle = styled(MainSection)((props) => ({
                         fontSize: '18px',
                         lineHeight: '1.3em',
                         fontWeight: 400,
-                    }
+                    },
                 },
 
         }
@@ -160,7 +170,11 @@ const MainSectionStyle = styled(MainSection)((props) => ({
             fontSize: '16px',
             lineHeight: '1.3em',
 
-        }
+        },'& .Explore': {
+            h2: {
+                fontSize: '40px'
+            }
+        },
     },
 
 

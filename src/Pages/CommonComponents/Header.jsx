@@ -108,6 +108,8 @@ export const HeaderStyle = styled(Header)((props) => ({
             flexDirection: 'column',
             gap: '4px',
             padding: '8px',
+            cursor: 'pointer',
+            
         },
         '& .tabs__item__menu .menu .line': {
             backgroundColor: 'rgba(0, 0, 0, 0.5)',

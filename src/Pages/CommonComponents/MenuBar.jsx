@@ -82,6 +82,9 @@ const MenuStyle = styled(MenuBar)((props) => ({
             textDecoration: 'none',
             color: props.theme.tabsColor,
             fontWeight: '500',
+            display: 'block',
+            padding: '5px'
+
         },
         '& .tabs__item a:hover': {
             opacity: 0.8,
