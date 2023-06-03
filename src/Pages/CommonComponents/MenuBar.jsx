@@ -5,6 +5,7 @@ import { RxCross1 } from 'react-icons/all'
 import { Link } from 'react-router-dom';
 import { AboutLink } from '../About/About';
 import { WorkLink } from '../Work/Work';
+import { PricingLink } from '../Pricing/Pricing';
 
 const MenuBar = ({className, menu, setMenu}) => {
 
@@ -21,7 +22,7 @@ const MenuBar = ({className, menu, setMenu}) => {
                     </button>
                 </div>
                 <div className='tabs__item'>
-                    <Link >Pricing</Link>
+                    <PricingLink/>
                 </div>
                 <div className='tabs__item'>
                     <WorkLink/>

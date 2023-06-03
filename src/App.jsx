@@ -10,6 +10,7 @@ import { ThemeProvider } from 'styled-components';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Work from './Pages/Work/Work';
+import Pricing from './Pages/Pricing/Pricing';
 
 const commonTheme = {
 	fontSizeSmall: '14px', 
@@ -40,6 +41,7 @@ function App() {
 						</>} path="/" />
 					<Route element={<About/>} path="/About" />
 					<Route element={<Work/>} path="/Work" />
+					<Route element={<Pricing/>} path="/Pricing" />
 				</Routes>
 			</BrowserRouter>
 		</ThemeProvider>
