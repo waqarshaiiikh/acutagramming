@@ -25,7 +25,7 @@ const MainSection = (props) => {
                     customersArray &&
                     customersArray.map(
                         (customer, i) => (
-                            <div className={`customer${customer.id} customer`} key={customer.id}>
+                            <div className={`customer`} key={customer.id}>
                                 <div className='item video'>
 
                                     {customer?.video_src && <video controls > <source src={customer.video_src} type="video/mp4" /> </video>}
@@ -54,10 +54,18 @@ const MainSectionStyle = styled(MainSection)((props) => ({
         gap: '2rem',
         maxWidth: '1140px',
         margin: 'auto',
+        padding: '10px',
+        marginBottom: '90px',
+        marginTop: '40px',
+        '> .Explore': {
+            h2: {
+                fontSize: '48px'
+            }
+        },
         '& .customers': {
             display: 'flex',
             flexDirection: 'column',
-            gap: '1rem',
+            gap: '40px',
             '> .customer': {
                 display: 'flex',
                 gap: '1rem',
@@ -78,6 +86,8 @@ const MainSectionStyle = styled(MainSection)((props) => ({
                     width: '70%',
                     display: 'flex',
                     flexDirection: 'column',
+                    padding: '10px 30px 10px 40px',
+                    gap: '1rem',
                     '> .name h2': {
                         fontSize: '38px',
                         fontWeight: 800,
@@ -87,6 +97,7 @@ const MainSectionStyle = styled(MainSection)((props) => ({
                     },
                     '> .occupation h2': {
                         fontSize: '22px',
+                        fontWeight: 600,
                     },
                     '> .detail p': {
                         fontSize: '20px',
@@ -98,8 +109,60 @@ const MainSectionStyle = styled(MainSection)((props) => ({
             '> .customer:nth-child(even)': {
                 flexDirection: 'row-reverse'
             }
+        },
+    },
+    '@media screen and (max-width: 767px) ': {
+        '& .customers > .customer:nth-child(even)':{
+            flexDirection: 'column-reverse',
+        },
+        '& .customers > .customer':{
+                
+                flexDirection: 'column',
+                '> .item:nth-child(1)': {
+                    padding: '10px',
+                    video: {
+                        maxWidth: '100%'
+                    },
+                    width: '100%',
+                    '> *': { width: '100%', maxWidth: '100%'},
+                },
+                '> .item:nth-child(2)': {
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    padding: '20px 0px 10px',
+                    gap: '1rem',
+                    '> .name h2': {
+                        fontSize: '34px',
+                        fontWeight: 800,
+                    },
+                    '> .occupation h2': {
+                        fontSize: '26px',
+                        fontWeight: 600,
+                    },
+                    '> .detail p': {
+                        fontSize: '18px',
+                        lineHeight: '1.3em',
+                        fontWeight: 400,
+                    }
+                },
+
         }
     },
+    '@media screen and (min-width: 768px) and (max-width: 1023px)': {
+        '& .customers > .customer > .item:nth-child(2) > .name h2': {
+            fontSize: '28px',
+        },
+        '& .customers > .customer > .item:nth-child(2) > .occupation h2': {
+            fontSize: '22px',
+        },
+        '& .customers > .customer > .item:nth-child(2) > .detail p': {
+            fontSize: '16px',
+            lineHeight: '1.3em',
+
+        }
+    },
+
 
 }));
 
