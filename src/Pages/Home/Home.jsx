@@ -3,8 +3,7 @@ import Banner from './Component/Banner'
 import CompanyStatistics from './Component/CompanyStatistics'
 import CustomerExperience from './Component/CustomerExperience'
 import ExperienceFrame from './Component/ExperienceFrame';
-import CompanyMoto from './Component/CompanyMoto'
-import Advertisement from '../CommonComponents/Advertisement';
+import CompanyMoto from './Component/CompanyMoto';
 import WantsToConnect from '../CommonComponents/WantsToConnect';
 
 const Home = () => {
@@ -17,5 +16,8 @@ const Home = () => {
         <WantsToConnect/>
     </>)
 }
+
+export const HomeLink = () => <Link to='/Home' >Home</Link>;
+
 
 export default Home

@@ -3,6 +3,8 @@ import { createPortal } from 'react-dom'
 import styled from 'styled-components';
 import { RxCross1 } from 'react-icons/all'
 import { Link } from 'react-router-dom';
+import { AboutLink } from '../About/About';
+import { WorkLink } from '../Work/Work';
 
 const MenuBar = ({className, menu, setMenu}) => {
 
@@ -19,13 +21,13 @@ const MenuBar = ({className, menu, setMenu}) => {
                     </button>
                 </div>
                 <div className='tabs__item'>
-                    <Link to='/About' >Pricing</Link>
+                    <Link >Pricing</Link>
                 </div>
                 <div className='tabs__item'>
-                    <Link to='/About' >Work</Link>
+                    <WorkLink/>
                 </div>
                 <div className='tabs__item'>
-                    <Link to='/About' >About</Link>
+                    <AboutLink/>
                 </div>
             </div>
             <div className='transparent-div' onClick={handleClose}></div>
