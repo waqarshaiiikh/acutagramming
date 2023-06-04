@@ -1,13 +1,21 @@
 import React from 'react'
 import { createPortal } from 'react-dom'
-import styled from 'styled-components';
 import { RxCross1 } from 'react-icons/all'
 import { Link } from 'react-router-dom';
 import { AboutLink } from '../About/About';
 import { WorkLink } from '../Work/Work';
 import { PricingLink } from '../Pricing/Pricing';
+import styled, { keyframes } from 'styled-components';
+import { slideInLeft } from 'react-animations';
 
-const MenuBar = ({className, menu, setMenu}) => {
+const slideAnimation = keyframes`${slideInLeft}`;
+const SlideInDiv = styled.div`
+    animation: 1s ${slideAnimation};
+`;
+const TransparentSlide = styled.div`
+    animation: 1s ${slideAnimation};
+`;
+const MenuBar = ({ className, menu, setMenu }) => {
 
     const handleClose = () => {
         setMenu(false);
@@ -15,23 +23,23 @@ const MenuBar = ({className, menu, setMenu}) => {
 
     return createPortal(
         <div className={className}>
-            <div className='menu'>
+            <SlideInDiv className='menu'>
                 <div className='menu__section'>
                     <button className='menu__section--button' onClick={handleClose} >
                         <RxCross1 />
                     </button>
                 </div>
                 <div className='tabs__item'>
-                    <PricingLink/>
+                    <PricingLink />
                 </div>
                 <div className='tabs__item'>
-                    <WorkLink/>
+                    <WorkLink />
                 </div>
                 <div className='tabs__item'>
-                    <AboutLink/>
+                    <AboutLink />
                 </div>
-            </div>
-            <div className='transparent-div' onClick={handleClose}></div>
+            </SlideInDiv>
+            <TransparentSlide className='transparent-div' onClick={handleClose}></TransparentSlide>
         </div>
         , document.getElementById('menu'));
 }
@@ -40,7 +48,7 @@ const MenuStyle = styled(MenuBar)((props) => ({
     '&': {
         display: 'flex',
     },
-    '& .menu, transparent-div':{
+    '& .menu, transparent-div': {
         // transition: 'transform 3s ease-out', // Adding the transition property
         // transform: props.menu ? 'translateX(0)' : 'translateX(-100%)', // Apply the transformation based on menu state    
     },
@@ -75,7 +83,7 @@ const MenuStyle = styled(MenuBar)((props) => ({
                 fontSize: '15px',
             }
         },
-        '& .tabs__item':{
+        '& .tabs__item': {
             padding: '10px 15px',
         },
         '& .tabs__item a': {
@@ -92,7 +100,7 @@ const MenuStyle = styled(MenuBar)((props) => ({
 
     },
     '& .transparent-div': {
-        position: 'fixed', 
+        position: 'fixed',
         transition: 'width 0.5s', // Adding the transition property
         width: props.menu ? '100vw' : '0', // Apply the width based on menu state
         height: '100vh',
@@ -100,7 +108,7 @@ const MenuStyle = styled(MenuBar)((props) => ({
         backgroundColor: 'rgba(51,51,51,.5)',
         opacity: '0.5',
     },
-   
+
 }));
 
 export default MenuStyle;

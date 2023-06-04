@@ -1,6 +1,13 @@
 import React, { useEffect } from 'react'
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import styled, { keyframes } from 'styled-components';
+import { fadeInRight } from 'react-animations';
+
+const slideAnimation = keyframes`${fadeInRight}`;
+const SlideInDiv = styled.h2`
+  animation: 2s ${slideAnimation};
+`;
+
 
 const index = ({ className }) => {
 
@@ -10,7 +17,7 @@ const index = ({ className }) => {
 
     return (
         <section className={className}>
-            <h2 className='main__heading--h2'>Privacy Policy</h2>
+            <SlideInDiv className='main__heading--h2'>Privacy Policy</SlideInDiv>
             <div className='content'>
                 <p className='content__para'>This Privacy Policy (“Policy”) explains how information about You is collected, used, and disclosed by Your access or use of this Site or otherwise as a result of Your interactions with Us. By visiting this Site directly or through another site, You accept the terms and conditions of this Policy. This Policy applies to this Site. We are not responsible for the content or privacy practices on any website not operated by Us to which this Site links or that links to this Site.​We respect children’s privacy. We do not knowingly or intentionally collect personal information from children under age 13. Elsewhere on the Site, you have represented and warranted that you are either 18 years of age or using the Site with the supervision of a parent or guardian. If you are under the age of 13, please do not submit any personal information to Us, and rely on a parent or guardian to assist you.</p>
                 <h2 className='sub__heading--h2'>Information Collection</h2>
