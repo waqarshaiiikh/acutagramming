@@ -53,6 +53,7 @@ const CompanyStatistics = styled(StatisticsSection)((props) => ({
     },
     '& .statistic-title h1': {
         fontSize: '40px',
+        fontWeight:800,
     },
     '& .statistic__section': {
         width: '100%'
