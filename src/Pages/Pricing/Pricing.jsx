@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { HeaderStyle } from '../CommonComponents/Header';
 import { FooterStyle } from '../CommonComponents/Footer';
-import Branding from './Component/Branding';
+import Section from './Component/Section';
 
 const Pricing = () => {
   return (
     <>
         <HeaderStyle/>
-        <Branding/>
+        <Section/>
         <FooterStyle/>
     </>
   )
