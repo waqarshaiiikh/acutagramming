@@ -3,8 +3,13 @@ import Quotation from '../../../assets/Quotation-white.png'
 import Video from '../../../assets/Melissa-Lin-Certified-Business-Coach.mp4'
 import styled from 'styled-components'
 import ButtonStyle from '../../CommonComponents/ButtonComponent'
+import { useNavigate } from 'react-router-dom'
 
 const CustomerExperience = ({ className }) => {
+  const nav = useNavigate();
+  const handleNavigate = ()=>{
+    nav('/Work');
+  }
   return (
     <section className={className}>
       <div className='wrapper__video'>
@@ -18,7 +23,7 @@ const CustomerExperience = ({ className }) => {
           <div className='customer-experience-text'><p>I have been working with Acutagramming for more than a year now and my experience with them has just been above and beyond. They're so pleasant to work with ...</p></div>
           <div className='customer-experience-customer'><p className='name'>Melissa Lin</p><p className='occupation'>{'(Business Coach)'}</p></div>
           <div className='customer-experience-btn'>
-            <ButtonStyle text='View more examples' variant='fill' color='black' ></ButtonStyle>
+            <ButtonStyle text='View more examples' variant='fill' color='black' onClick={handleNavigate} ></ButtonStyle>
           </div>
         </div>
 

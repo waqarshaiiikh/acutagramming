@@ -15,14 +15,14 @@ const Section = (props) => {
         { id: 1, type: 'Instagram Trial', price: '$99', btnText: 'Buy', included: ['50-100 targeted followers', 'Duration: 15-20 days'] },
         { id: 2, type: 'Facebook Group Trial', price: '$149', btnText: 'Buy', included: ['60-80 FB group members', 'Duration: 15-25 days'] },
         { id: 3, type: 'LinkedIn Trial', price: '$129', btnText: 'Buy', included: ['80-110 targeted connections', 'Duration: 25-30 days',] },
-        { id: 3, type: 'TikTok Trial', price: '$99', btnText: 'Buy', included: ['60-100 targeted followers', 'Duration: 15-25 days',] },
+        { id: 4, type: 'TikTok Trial', price: '$99', btnText: 'Buy', included: ['60-100 targeted followers', 'Duration: 15-25 days',] },
     ];
     
     const GrowthCard = [
         { id: 1, type: 'Instagram Growth', price: '$199', btnText: 'Buy', included: ['Profile optimization', '150-200 targeted followers', 'Duration: 30 days', 'Progress reports'] },
         { id: 2, type: 'Facebook Group Growth', price: '$349', btnText: 'Buy', included: ['210-260 targeted followers', 'Duration: 30 days', 'Progress reports'] },
         { id: 3, type: 'LinkedIn Growth', price: '$299', btnText: 'Buy', included: ['Profile optimization', '290-460 targeted followers', 'Duration: 30 days', 'Progress reports'] },
-        { id: 3, type: 'TikTok Growth', price: '$199', btnText: 'Buy', included: ['Profile optimization', '150-200 targeted followers', 'Duration: 30 days', 'Progress reports'] },
+        { id: 4, type: 'TikTok Growth', price: '$199', btnText: 'Buy', included: ['Profile optimization', '150-200 targeted followers', 'Duration: 30 days', 'Progress reports'] },
     ]
 
     return (

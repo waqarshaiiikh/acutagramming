@@ -12,9 +12,10 @@ const Header = ({ className }) => {
 
     const [menu, setMenu] = useState(false);
 
-    const openSideBar = ()=> {
+    const openSideBar = () => {
         setMenu(true);
     }
+
 
     return (
         <header className={className}>
@@ -27,13 +28,13 @@ const Header = ({ className }) => {
 
                 <div className="tabs">
                     <div className='tabs__item'>
-                        <PricingLink/>
+                        <PricingLink />
                     </div>
                     <div className='tabs__item'>
-                        <WorkLink/>
+                        <WorkLink />
                     </div>
                     <div className='tabs__item'>
-                        <AboutLink/>
+                        <AboutLink />
                     </div>
                     <div className='tabs__item__menu'>
                         <button className='menu' onClick={openSideBar}>
@@ -50,7 +51,7 @@ const Header = ({ className }) => {
                 </div>
             </div>
 
-            {menu && <MenuStyle menu={menu} setMenu={setMenu}/>}
+            {menu && <MenuStyle menu={menu} setMenu={setMenu} />}
 
         </header>
     )
@@ -85,8 +86,8 @@ export const HeaderStyle = styled(Header)((props) => ({
         '& .tabs__item, .schedule-btn': {
             display: 'none',
         },
-        '& .margin__auto .tabs':{
-            gap:0,
+        '& .margin__auto .tabs': {
+            gap: 0,
         }
     },
     '@media screen and (min-width: 768px) and (max-width: 1023px)': {
@@ -109,7 +110,7 @@ export const HeaderStyle = styled(Header)((props) => ({
             gap: '4px',
             padding: '8px',
             cursor: 'pointer',
-            
+
         },
         '& .tabs__item__menu .menu .line': {
             backgroundColor: 'rgba(0, 0, 0, 0.5)',

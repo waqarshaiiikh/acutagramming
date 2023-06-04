@@ -3,16 +3,17 @@ import logo from "../../assets/logo-white-text.png";
 import { BsFacebook } from "react-icons/bs";
 import { FaInstagram, FaLinkedin, FaTiktok, FaTwitter } from "react-icons/fa";
 import styled, { css } from "styled-components";
-import { Link, NavLink } from "react-router-dom";
 import { PricingLink } from "../Pricing/Pricing";
 import { WorkLink } from "../Work/Work";
 import { AboutLink } from "../About/About";
+import { PrivacyLink } from '../../Pages/Privacy'
+import { TermsLink } from '../../Pages/Terms'
 
 
 const Footer = (props) => {
   const scrollUp = useCallback(() => {
-      window.scrollTo(0, 0);
-    }
+    window.scrollTo(0, 0);
+  }
     , []
   )
 
@@ -64,14 +65,13 @@ const Footer = (props) => {
                 <PricingLink onClick={scrollUp} />
               </div>
             </div>
-
             <div className='footer__section__content legal'>
               <h2 className='tabs-title'> Legal</h2>
               <div className='footer-tabs'>
-                <NavLink to={"/Privacy"}> Privacy</NavLink>
+                <PrivacyLink onClick={scrollUp} />
               </div>
               <div className='footer-tabs'>
-                <NavLink to={"/Terms"}>Terms</NavLink>
+                <TermsLink onClick={scrollUp} />
               </div>
             </div>
           </div>

@@ -4,6 +4,12 @@ import ButtonStyle from '../../CommonComponents/ButtonComponent'
 import heroImage from '../../../assets/hero-image.png';
 
 const BannerComponent = ({ className }) => {
+    
+    
+    const handleOpen = () => {
+        window.open('https://vf51aeockks.typeform.com/to/LbutrF47');
+    }
+
     return (
         <section className={className}>
             <div className='Banner__section'>
@@ -18,7 +24,7 @@ const BannerComponent = ({ className }) => {
                     </h1>
                 </div>
                 <div className='Banner-get-free-Button' >
-                    <ButtonStyle text='Get FREE Social Media Roadmap' variant='fill' color='yellow' ></ButtonStyle>
+                    <ButtonStyle text='Get FREE Social Media Roadmap' variant='fill' color='yellow' onClick={handleOpen} ></ButtonStyle>
                 </div>
 
             </div>

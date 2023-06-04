@@ -15,7 +15,7 @@ const Card = ({ className, pricingCard }) => {
                                 <h2>From</h2>
                                 <div className='priceText'> <h2>{card.price}</h2></div>
                                 <div className='btn'>
-                                    <ButtonStyle text={card.btnText} variant='fill' color='black' />
+                                    <ButtonStyle text={card.btnText} variant='fill' color='black'  onClick={()=>{}} />
                                 </div>
                             </div>
                         </div>

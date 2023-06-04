@@ -4,14 +4,15 @@
 import styled from "styled-components";
 
 
-const ButtonComponent = ({ className, text }) => {
+const ButtonComponent = ({ className, text, onClick=()=>{window.open('https://calendly.com/acutagramming11/30min?month=2023-06')} }) => {
     return (
-        <button className={className}>{text}</button>
+        <button className={className} onClick={onClick}>{text}</button>
     )
 }
 
 const ButtonStyle = styled(ButtonComponent)(({ theme, variant, color }) => ({
     '&': {
+        cursor: 'pointer',
         padding: '12px 24px',
         fontSize: theme.fontSizeSmall,
         backgroundColor: variant === 'fill' ? theme[color] : 'white',

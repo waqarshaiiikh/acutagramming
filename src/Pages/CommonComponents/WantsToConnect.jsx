@@ -3,6 +3,11 @@ import styled from 'styled-components'
 import ButtonStyle from './ButtonComponent';
 
 const WantsToConnect = ({ className }) => {
+       
+    const handleOpen = () => {
+        window.open('https://vf51aeockks.typeform.com/to/LbutrF47');
+    }
+
     return (
         <div className={className}>
             <div className='margin-auto'>
@@ -10,7 +15,7 @@ const WantsToConnect = ({ className }) => {
                 <div className='wrapper'>
                     <ButtonStyle text='Discuss a project' variant='fill' color='yellow' ></ButtonStyle>
                     <p>or</p>
-                    <ButtonStyle text='Get FREE Social Media Roadmap' variant='outline' color='none' ></ButtonStyle>
+                    <ButtonStyle text='Get FREE Social Media Roadmap' variant='outline' color='none' onClick={handleOpen} ></ButtonStyle>
                 </div>
 
             </div>
