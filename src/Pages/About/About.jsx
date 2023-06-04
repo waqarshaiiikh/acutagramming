@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AboutPageTextStyle } from './Component/AboutPageText'
 import { HeaderStyle } from '../CommonComponents/Header'
 import { FooterStyle } from '../CommonComponents/Footer'
@@ -7,6 +7,9 @@ import WantsToConnect from '../CommonComponents/WantsToConnect'
 import { Link } from 'react-router-dom'
 
 const About = () => {
+  useEffect(()=>{
+    document.title = 'About - Acutagramming';
+  },[])
   return (
     <>
       <HeaderStyle />

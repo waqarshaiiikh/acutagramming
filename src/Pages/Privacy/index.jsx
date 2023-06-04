@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 const index = ({ className }) => {
+
+    useEffect(()=>{
+        document.title = 'Privacy Policy - Acutagramming';
+      },[])
+
     return (
         <section className={className}>
             <h2 className='main__heading--h2'>Privacy Policy</h2>

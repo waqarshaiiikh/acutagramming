@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom'
 
 
 const index = ({className}) => {
-  return (
+    useEffect(()=>{
+        document.title = 'Terms of Services - Acutagramming';
+      },[])
+
+    return (
     <section className={className}>
             <h2 className='main__heading--h2'>Terms of Service</h2>
             <h2 className='sub__heading--h2'>1. Terms</h2>

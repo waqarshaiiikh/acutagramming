@@ -34,7 +34,7 @@ const CompanyMoto = ({ className }) => {
                 </span>
             </p>
             <div className='CompanyMoto-heading'>
-                <h2>Sell to your idea clients:</h2>
+                <h2>Sell to your idea clients</h2>
             </div>
             <p className='paragraph'>
                 With our sell services you finally start selling your coaching services to your ideal clients through social media and can turn your social media into a revenue generating stream for your business.
@@ -61,6 +61,7 @@ const CompanyMotoStyled = styled(CompanyMoto)((props) => ({
         },
         h2: {
             fontSize: '50px',
+            fontWeight: '550',
         },
         '& .whatWeDoNext': {
             textDecoration: 'underline',
@@ -79,12 +80,12 @@ const CompanyMotoStyled = styled(CompanyMoto)((props) => ({
             textAlign: 'justify',
             textJustify: 'inter-word',
             lineHeight: '25px',
-        },
-        '@media (max-width: 1023px)': {
+        },    
+        '@media screen and (min-width: 768px) and (max-width: 1023px)': {
             '&': {
                 h2: {
-                    fontSize: '34px',
-                    fontWeight: 600,
+                    // fontSize: '34px',
+                    // fontWeight: 600,
                 },
                 '& .CompanyMoto-heading': {
                     padding: '40px 0 20px 0',
@@ -102,8 +103,15 @@ const CompanyMotoStyled = styled(CompanyMoto)((props) => ({
                 },
             },
         },
-        
-
+        '@media screen and (max-width: 767px) ': {
+            '&':{
+                h2: {
+                    fontSize: '34px',
+                    fontWeight: 600,
+                    color: '#2F2F2F'
+                },
+            }
+        },
     },
 
 }));

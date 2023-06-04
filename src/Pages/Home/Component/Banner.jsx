@@ -55,6 +55,7 @@ const Banner = styled(BannerComponent)((props) => ({
 
             '& .Banner-advertising-text h1': {
                 fontSize: '60px',
+                fontWeight: 800,
             },
             '& .Banner-title': {
                 fontSize: '17px',

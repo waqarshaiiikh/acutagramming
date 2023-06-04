@@ -7,8 +7,8 @@ import CountUp from 'react-countup';
 const StatisticsSection = ({ className }) => {
     const statisticData = [
         { id: 1, icon_src: follower, icon_alt: "stats icon", number:2.5, suffix: " M", decimal: 1, under_text: "Social Media Followers" },
-        { id: 2, icon_src: client, icon_alt: "stats icon",number:100, suffix: " M", decimal: 0, under_text: "Social Media Views" },
-        { id: 3, icon_src: awareness, icon_alt: "stats icon", number:2 ,suffix: " K", decimal: 0, under_text: "Clients Served" },
+        { id: 2, icon_src: awareness, icon_alt: "stats icon",number:100, suffix: " M", decimal: 0, under_text: "Social Media Views" },
+        { id: 3, icon_src: client , icon_alt: "stats icon", number:2 ,suffix: " K", decimal: 0, under_text: "Clients Served" },
     ];
     return (
         <section className={className}>
@@ -81,7 +81,7 @@ const CompanyStatistics = styled(StatisticsSection)((props) => ({
     },
     '& .statistic-count-text span':{
         color: '#333333',
-        fontSize: '30px',
+        fontSize: '38px',
         fontWeight: 700,
     },
     '& .statistic-under-text h2': {

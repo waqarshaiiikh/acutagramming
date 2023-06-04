@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Banner from './Component/Banner'
 import CompanyStatistics from './Component/CompanyStatistics'
 import CustomerExperience from './Component/CustomerExperience'
@@ -7,6 +7,9 @@ import CompanyMoto from './Component/CompanyMoto';
 import WantsToConnect from '../CommonComponents/WantsToConnect';
 
 const Home = () => {
+    useEffect(()=>{
+        document.title = 'Acutagramming';
+      },[])
     return (<>
         <Banner />
         <CompanyStatistics/>
