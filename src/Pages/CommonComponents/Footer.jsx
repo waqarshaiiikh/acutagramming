@@ -11,11 +11,13 @@ import { TermsLink } from '../../Pages/Terms'
 
 
 const Footer = (props) => {
-  const scrollUp = useCallback(() => {
+  const scrollUp =  useCallback(() =>{
     window.scrollTo(0, 0);
-  }
-    , []
-  )
+  },[])
+  
+  const handleIconLink = useCallback( (href) =>{
+    window.open(href);
+  },[])
 
   return (
     <footer className={props.className}>
@@ -35,16 +37,16 @@ const Footer = (props) => {
             </div>
             <div className='footer-social-media-icons'>
               <div className='div_icon'>
-                <FaInstagram className='icon' />
+                <FaInstagram className='icon' onClick={()=>{handleIconLink('https://www.instagram.com/acutagramming/')}} />
               </div>
               <div className='div_icon'>
-                <BsFacebook className='icon' />
+                <BsFacebook className='icon' onClick={()=>{handleIconLink('https://www.facebook.com/acutagramming')}} />
               </div>
               <div className='div_icon'>
-                <FaLinkedin className='icon' />
+                <FaLinkedin className='icon' onClick={()=>{handleIconLink('https://www.linkedin.com/company/acutagramming/')}} />
               </div>
               <div className='div_icon'>
-                <FaTiktok className='icon' />
+                <FaTiktok className='icon'  />
               </div>
               <div className='div_icon'>
                 <FaTwitter className='icon' />
