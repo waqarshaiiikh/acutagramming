@@ -68,6 +68,7 @@ const SectionStyle = styled(Section)((props) => ({
     },
     '& h2.title': {
         fontSize: '56px',
+        fontWeight: 800,
         marginBottom: '20px',
     },
     '& p.content': {

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom'
 
@@ -58,6 +58,8 @@ const terms = styled(index)((props) => ({
       fontSize: '52px',
       padding: '40px 0',
       color: '#262E33',
+    //   transform: `translateX('100%')`,
+    //   transition: 'transform 2s',
   },
   '& h2.sub__heading--h2': {
       fontSize: '20px',

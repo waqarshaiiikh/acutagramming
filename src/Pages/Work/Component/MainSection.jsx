@@ -66,10 +66,10 @@ const MainSectionStyle = styled(MainSection)((props) => ({
             gap: '40px',
             '> .customer': {
                 display: 'flex',
-                gap: '1rem',
+                gap: '2rem',
                 '> .item:nth-child(1)': {
                     backgroundColor: 'black',
-                    padding: '20px',
+                    padding: '10px',
                     video: {
                         maxWidth: '297px'
                     },

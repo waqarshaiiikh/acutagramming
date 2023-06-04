@@ -48,8 +48,11 @@ const cardStyle = styled(Card)((props) => ({
             borderColor: '#DEDEDE',
             borderRadius: '12px',
             '& .price-description': {
-                padding: '30px 30px 0 30px',
+                padding: '30px 30px 30px 30px',
                 height: '300px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'space-between',
 
                 '& .wrapper__price': {
                     display: 'flex',
@@ -75,6 +78,9 @@ const cardStyle = styled(Card)((props) => ({
                         // padding: '10px 0px',
                         // alignSelf: 'center',
                         flexBasis: '80%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'end',
                         '> button': {
                             width: '100%',
                             fontSize: '15px',
@@ -122,14 +128,20 @@ const cardStyle = styled(Card)((props) => ({
         '& .price':{
             flexDirection: 'column',
             gap:'30px',
-            '& .card > .price-description >  .wrapper__price > .btn':{
-                width: '100%',
-                display: 'flex',
-                flexBasis: '100%',
-                justifyContent: 'center',
-                '> button ': {
-                    width: '30%'
-                }
+            '& .card > .price-description ':{
+
+                '> .wrapper__price ':{
+                    width: '100%',
+                    '> .btn':{
+                        width: '100%',
+                        display: 'flex',
+                        flexBasis: '100%',
+                        justifyContent: 'center',
+                        '> button ': {
+                            width: '80%'
+                        }
+                    },
+                },
             },
         }
     },
