@@ -47,13 +47,14 @@ const CompanyStatistics = styled(StatisticsSection)((props) => ({
     '&': {
         maxWidth: '1140px',
         margin: 'auto',
-        padding: '80px 0px',
+        padding: '90px 10px',
         display: 'flex',
         flexDirection: 'column',
     },
     '& .statistic-title h1': {
         fontSize: '40px',
         fontWeight:800,
+        lineHeight:'1em',
     },
     '& .statistic__section': {
         width: '100%'
@@ -62,33 +63,43 @@ const CompanyStatistics = styled(StatisticsSection)((props) => ({
         margin: 'auto',
         display: 'flex',
         justifyContent: 'space-between',
-        padding: '10px 0',
         maxWidth: '1140px',
     },
     '& .statistic-title': {
-        padding: '20px 10px',
+        marginBottom: '20px',
+        color: '#323232'
     },
     '& .statistic-detail-item': {
         alignSelf: 'center',
         flex: 1,
         display: 'flex',
         flexDirection: 'column',
+        padding: '10px',
         alignItems: 'center',
     },
     '& .statistic-icon img': {
         width: '75px',
         height: '75px',
+        marginBottom: '10px'
+    },
+    '.statistic-detail-item:nth-child(1) .statistic-icon img':{
+        width: '65px',
+        height: '65px',
         marginBottom: '20px'
     },
     '& .statistic-count-text span':{
         color: '#333333',
         fontSize: '38px',
+        lineHeight:1,
         fontWeight: 700,
+        padding: '1px 0px'
     },
     '& .statistic-under-text h2': {
         color: '#808080',
         fontSize: '22px',
+        lineHeight:1,
         fontWeight: 400,
+        paddingTop: '4px'
     },
     '@media (max-width: 768px)': {
         "& .statistic-detail": {
@@ -103,4 +114,4 @@ const CompanyStatistics = styled(StatisticsSection)((props) => ({
 }));
 
 
-export default CompanyStatistics
+export default CompanyStatistics;

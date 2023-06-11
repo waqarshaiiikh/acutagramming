@@ -30,6 +30,7 @@ const BannerComponent = ({ className }) => {
             </div>
 
             <div className='Banner__section Banner-image'>
+                <div className='img' />
                 <img src={heroImage} alt='Banner-img' />
             </div>
         </section>
@@ -38,47 +39,64 @@ const BannerComponent = ({ className }) => {
 
 const Banner = styled(BannerComponent)((props) => ({
     '&': {
-
         maxWidth: '1140px',
         margin: 'auto',
         display: 'flex',
-        padding: '70px 14px 40px 14px',
+        padding: '70px 0px 40px 0px',
+
+        // '.Banner__section': {
+        // },
+
         '& .Banner__section:nth-child(1)': {
 
             width: '64.209%',
             // flexGrow:1,
             display: 'flex',
             flexDirection: 'column',
-            gap: '6px',
+            gap: '20px',
+            padding: '10px',
             color: '#323232',
 
 
             '& .Banner-advertising-text h1': {
                 fontSize: '60px',
                 fontWeight: 800,
+                lineHeight: 1,
             },
-            '& .Banner-title': {
+            '& .Banner-title > p': {
                 fontSize: '17px',
+                fontWeight: 500,
+                color: '#6B6B6B',
+                lineHeight: 1,
             }
+            ,
+            '& .Banner-get-free-Button > button ': {
+                fontSize: '16px',
+                color: '#2B2B2B',
+                fontWeight: 500,
+                lineHeight :1,
+
+            },
 
         },
         '& .Banner__section:nth-child(2)': {
             // flexGrow:1,
             width: '35.123%',
             display: 'flex',
-
-        },
-        '& img': {
-            width: '100%',
-            // height: 'auto',
-            // backgroundImage: `url(${heroImage})`,
-            // backgroundSize: 'cover',
-            display: 'flex',
             flexWrap: 'wrap',
-            alignContent: 'flex-start',
-            verticalAlign: 'middle',
-            height: 'auto',
+            // alignContent: 'flex-start',
+            
         },
+        '& .img': {
+            width: '100%',
+            backgroundImage: `url(${heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition:'center',
+            display: 'inline',
+        },
+        '& img':{
+            display: 'none',
+        }
     },
     '@media screen and (max-width: 767px) ': {
         '& .Banner__section:nth-child(1) .Banner-advertising-text h1': {
@@ -93,6 +111,20 @@ const Banner = styled(BannerComponent)((props) => ({
         },
         '& .Banner-get-free-Button': {
             display: 'none'
+        },
+        '& .Banner__section:nth-child(2) .img':{
+            display: 'none',
+        },
+        '& .Banner__section:nth-child(2) img':{
+            display: 'block',
+            width: '100%',
+            height: 'auto',
+            // backgroundImage: `url(${heroImage})`,
+            // backgroundSize: 'cover',
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignContent: 'flex-start',
+            verticalAlign: 'middle',
         }
     },
     '@media screen and (min-width: 768px) and (max-width: 1023px)': {

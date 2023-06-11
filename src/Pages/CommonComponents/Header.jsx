@@ -43,7 +43,7 @@ const Header = ({ className }) => {
                             <span className='line'></span>
                         </button>
                     </div>
-                    <div>
+                    <div className='tabs_item_btn' >
                         <div className='schedule-btn'>
                             <ButtonStyle text='Schedule a Call' variant='fill' color='yellow' ></ButtonStyle>
                         </div>
@@ -61,10 +61,10 @@ export const HeaderStyle = styled(Header)((props) => ({
     '& .margin__auto': {
         display: 'flex',
         justifyContent: 'space-between',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         maxWidth: '1140px',
         margin: 'auto',
-        padding: '25px 14px',
+        padding: '25px 0px 0px 0px',
         '& .tabs': {
             display: 'flex',
             alignItems: 'center',
@@ -73,24 +73,66 @@ export const HeaderStyle = styled(Header)((props) => ({
                 textDecoration: 'none',
                 color: props.theme.tabsColor,
                 fontWeight: '500',
+                letterSpacing: '0.5px',
             },
             '& .tabs__item a:hover': {
                 opacity: 0.8,
             },
             '& .tabs__item__menu': {
                 display: 'none',
+            },
+            '& .tabs_item_btn':{
+                padding: '10px 25px 10px 12px',
+                '.schedule-btn > button ':{
+                    height: '40px',
+                    paddingTop: '10px',
+                    fontWeight: 500,
+                    color: '#2B2B2B'
+                }
             }
+
+        },
+        '& .logo':{
+            padding : '10px',
         }
     },
     '@media screen and (max-width: 767px) ': {
-        '& .tabs__item, .schedule-btn': {
+        '& .tabs__item, .tabs_item_btn': {
             display: 'none',
+        },
+        '& .margin__auto .logo':{
+            flexBasis: '50%',
+            display:'flex',
+            justifyContent: 'center',
         },
         '& .margin__auto .tabs': {
             gap: 0,
-        }
+            padding: '10px',
+            flexBasis: '50%',
+        },
+        '& .margin__auto': {
+            alignItems: 'stretch',
+            justifyContent:'unset',
+            flexBasis:1,
+            '.tabs':{
+                padding: '10px',
+                display: 'flex',
+                justifyContent: 'end',
+            },
+            '.tabs .tabs__item__menu': {
+                display: 'block',
+                paddingBottom:'10px',
+            },
+        },
     },
     '@media screen and (min-width: 768px) and (max-width: 1023px)': {
+        '& .margin__auto .tabs':{
+            alignItems: 'end',
+            gap: '20px',
+            '& .tabs_item_btn':{
+                padding: '10px 25px 0px 12px',
+            }   
+        }
     },
     /**common css for both tablet and mobile */
     '@media (max-width: 1023px) ': {
