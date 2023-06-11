@@ -99,12 +99,16 @@ const Banner = styled(BannerComponent)((props) => ({
         }
     },
     '@media screen and (max-width: 767px) ': {
-        '& .Banner__section:nth-child(1) .Banner-advertising-text h1': {
-            fontSize: '40px',
-        },
         '&': {
             flexDirection: 'column',
-            padding: '70px 14px 40px 14px',
+            padding: '95px 10px 50px',
+            gap: '20px',
+        },
+        '& .Banner__section:nth-child(1)':{
+            padding: '0px',
+        },
+        '& .Banner__section:nth-child(1) .Banner-advertising-text h1': {
+            fontSize: '40px',
         },
         '& .Banner__section:nth-child(1), .Banner__section:nth-child(2)': {
             width: '100%'
@@ -125,6 +129,7 @@ const Banner = styled(BannerComponent)((props) => ({
             flexWrap: 'wrap',
             alignContent: 'flex-start',
             verticalAlign: 'middle',
+            padding: '20px 0'
         }
     },
     '@media screen and (min-width: 768px) and (max-width: 1023px)': {
