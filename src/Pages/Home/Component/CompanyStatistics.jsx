@@ -6,9 +6,9 @@ import CountUp from 'react-countup';
 
 const StatisticsSection = ({ className }) => {
     const statisticData = [
-        { id: 1, icon_src: follower, icon_alt: "stats icon", number:2.5, suffix: " M", decimal: 1, under_text: "Social Media Followers" },
-        { id: 2, icon_src: awareness, icon_alt: "stats icon",number:100, suffix: " M", decimal: 0, under_text: "Social Media Views" },
-        { id: 3, icon_src: client , icon_alt: "stats icon", number:2 ,suffix: " K", decimal: 0, under_text: "Clients Served" },
+        { id: 1, icon_src: follower, icon_alt: "stats icon", number: 2.5, suffix: " M", decimal: 1, under_text: "Social Media Followers" },
+        { id: 2, icon_src: awareness, icon_alt: "stats icon", number: 100, suffix: " M", decimal: 0, under_text: "Social Media Views" },
+        { id: 3, icon_src: client, icon_alt: "stats icon", number: 2, suffix: " K", decimal: 0, under_text: "Clients Served" },
     ];
     return (
         <section className={className}>
@@ -23,15 +23,15 @@ const StatisticsSection = ({ className }) => {
                         </div>
                         <div className='statistic-count-text'>
                             <CountUp
-                             start={1.0}
-                             end={stats.number}
-                             decimals={stats.decimal}
-                             duration={2.75}
-                             prefix='+ '
-                             suffix={stats.suffix}
-                             separator=" "
-                             >
-                             </CountUp>
+                                start={1.0}
+                                end={stats.number}
+                                decimals={stats.decimal}
+                                duration={2.75}
+                                prefix='+ '
+                                suffix={stats.suffix}
+                                separator=" "
+                            >
+                            </CountUp>
                         </div>
                         <div className='statistic-under-text'>
                             <h2>{stats.under_text}</h2>
@@ -53,8 +53,8 @@ const CompanyStatistics = styled(StatisticsSection)((props) => ({
     },
     '& .statistic-title h1': {
         fontSize: '40px',
-        fontWeight:800,
-        lineHeight:'1em',
+        fontWeight: 800,
+        lineHeight: '1em',
     },
     '& .statistic__section': {
         width: '100%'
@@ -82,30 +82,47 @@ const CompanyStatistics = styled(StatisticsSection)((props) => ({
         height: '75px',
         marginBottom: '10px'
     },
-    '.statistic-detail-item:nth-child(1) .statistic-icon img':{
-        width: '65px',
-        height: '65px',
+    '.statistic-detail-item:nth-child(1) .statistic-icon img': {
+        width: '64px',
+        height: '64px',
         marginBottom: '20px'
     },
-    '& .statistic-count-text span':{
+    '& .statistic-count-text span': {
         color: '#333333',
         fontSize: '38px',
-        lineHeight:1,
+        lineHeight: 1,
         fontWeight: 700,
         padding: '1px 0px'
     },
     '& .statistic-under-text h2': {
         color: '#808080',
         fontSize: '22px',
-        lineHeight:1,
+        lineHeight: 1,
         fontWeight: 400,
         paddingTop: '4px'
     },
+
+    '@media screen and (min-width: 768px) and (max-width: 1023px)': {
+        '& .statistic-count-text span': {
+            fontSize: '30px',
+        },
+        '& .statistic-under-text h2': {
+            fontSize: '18px',
+        }
+
+    },
+
     '@media (max-width: 768px)': {
         "& .statistic-detail": {
             display: 'flex',
             flexDirection: 'column',
-            gap: '2rem'
+            gap: '5px',
+        },
+        '& .statistic-count-text span': {
+            fontSize: '30px',
+        },
+        '& .statistic-under-text h2': {
+            fontSize: '18px',
         }
     },
 
