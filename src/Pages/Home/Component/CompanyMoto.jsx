@@ -57,11 +57,14 @@ const CompanyMotoStyled = styled(CompanyMoto)((props) => ({
             fontWeight: 600,
             letterSpacing: '1px',
             display: 'block',
-            padding: '10px 0'
+            lineHeight:1,
+            marginBottom: '20px'
         },
         h2: {
             fontSize: '50px',
             fontWeight: '550',
+            lineHeight:1.4,
+            marginBottom: '20px'
         },
         '& .whatWeDoNext': {
             textDecoration: 'underline',

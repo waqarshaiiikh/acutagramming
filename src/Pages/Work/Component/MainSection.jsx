@@ -66,7 +66,7 @@ const MainSectionStyle = styled(MainSection)((props) => ({
             gap: '40px',
             '> .customer': {
                 display: 'flex',
-                gap: '2rem',
+                // gap: '2rem',
                 '> .item:nth-child(1)': {
                     backgroundColor: 'black',
                     padding: '10px',
@@ -158,6 +158,11 @@ const MainSectionStyle = styled(MainSection)((props) => ({
         }
     },
     '@media screen and (min-width: 768px) and (max-width: 1023px)': {
+        
+        '&':{
+            marginBottom: '70px',
+            marginTop: '20px',
+        },
         '& .customers > .customer > .item:nth-child(2) > .name h2': {
             fontSize: '28px',
         },
@@ -172,7 +177,10 @@ const MainSectionStyle = styled(MainSection)((props) => ({
             h2: {
                 fontSize: '40px'
             }
-        },
+        }, 
+        '& .customers > .customer > .item:nth-child(2)':{
+            padding: '0px 20px',
+        }
     },
 
 

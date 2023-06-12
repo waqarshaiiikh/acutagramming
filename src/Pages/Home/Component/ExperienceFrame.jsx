@@ -144,6 +144,7 @@ const ExperienceFrameStyle = styled(ExperienceFrame)((props) => ({
           fontSize: '20px',
           color: '#717171',
           fontWeight: '400',
+          lineHeight: 1,
         }
       },
 

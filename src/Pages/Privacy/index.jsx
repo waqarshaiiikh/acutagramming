@@ -55,13 +55,14 @@ const privacy = styled(index)((props) => ({
     '&': {
         maxWidth: '1140px',
         margin: 'auto',
-        padding: '10px',
+        padding: '20px 10px 90px',
 
     },
     '& h2.main__heading--h2': {
         fontSize: '52px',
         padding: '40px 0',
         color: '#262E33',
+        textAlign: 'center',
     },
     '& h2.sub__heading--h2': {
         fontSize: '20px',

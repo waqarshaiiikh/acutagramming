@@ -38,13 +38,13 @@ const CustomerExperienceStyle = styled(CustomerExperience)(props => ({
     wordWrap: 'breakWord',
     backgroundColor: props.theme.yellow,
     display: 'flex',
-    margin: '6rem 2rem 4rem 2rem',
+    margin: '80px 40px',
     borderRadius: '25px',
     '& .wrapper__video': {
       maxWidth: props.theme.maxWidth,
       margin: 'auto',
       display: 'flex',
-      padding: '60px 10px',
+      padding: '60px 0px 60px 0px',
     }
   },
 
@@ -52,7 +52,8 @@ const CustomerExperienceStyle = styled(CustomerExperience)(props => ({
     padding: '10px 30px 10px 40px',
     display: 'flex',
     flexDirection: 'column',
-    gap: '2rem',
+    width: '69.298%',
+    gap: '20px',
     '& .customer-experience-text': {
       fontSize: '30px',
       fontWeight: '400px',
@@ -79,12 +80,24 @@ const CustomerExperienceStyle = styled(CustomerExperience)(props => ({
   },
   '& .customer-experience-video': {
     backgroundColor: 'black',
-    padding: '5px 10px',
+    padding: '10px',
+    width: '30.702%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'start',
     video: {
-      maxWidth: '297px'
+      minWidth: '290px',
+      width: '90%'
     }
   },
   '@media screen and (min-width: 768px) and (max-width: 1023px)': {
+    '&':{
+      margin: '0px 20px',
+    },
+    '& .wrapper__video':{
+      padding: '60px 20px'
+    },
     '& .video__description': {
       '& .customer-experience-text': {
         fontSize: '18px',
@@ -103,11 +116,21 @@ const CustomerExperienceStyle = styled(CustomerExperience)(props => ({
     '& .customer-experience-quotation img':{
       width: '50px',
     },
+    '& .customer-experience-video':{
+      video: {
+        minWidth: 1,
+        width: '100%',
+      }
+    }
 
   },
   '@media screen and (max-width: 767px) ': {
+    '&':{
+      margin: '80px 20px',
+    },
     '& .video__description': {
       padding: '10px 0 10px 0',
+      width:'100%',
       '& .customer-experience-text': {
         fontSize: '18px',
         fontWeight: '400px',
@@ -127,13 +150,15 @@ const CustomerExperienceStyle = styled(CustomerExperience)(props => ({
       margin: 'auto',
       display: 'flex',
       flexDirection: 'column',
-      padding: '40px 10px',
+      padding: '60px 20px 80px 20px',
     },
     '& .customer-experience-video': {
       backgroundColor: 'black',
       padding: '5px',
+      width:'100%',
       video:{
         width: '100%',
+        minWidth: '1px',
         maxWidth: '800px',
       }
     },

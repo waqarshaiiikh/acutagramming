@@ -56,7 +56,7 @@ const terms = styled(index)((props) => ({
     '&': {
         maxWidth: '1140px',
         margin: 'auto',
-        padding: '10px 10px 60px 10px',
+        padding: '10px 10px 90px 10px',
 
     },
     '& h2.main__heading--h2': {
